@@ -213,14 +213,17 @@ const StorageInfoScreen = ({ navigation }) => {
         if (requestedPerm) {
           await scanStorageMetrics();
         } else {
-          await calculateDiskCapacityOnly();
+          navigation.goBack();
+          return;
         }
       } else {
         setPermissionGranted(false);
-        await calculateDiskCapacityOnly();
+        navigation.goBack();
+        return;
       }
     } catch (err) {
-      await calculateDiskCapacityOnly();
+      navigation.goBack();
+      return;
     } finally {
       initialLoadedRef.current = true;
       setLoading(false);
