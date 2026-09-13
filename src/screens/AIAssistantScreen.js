@@ -70,7 +70,7 @@ const SEND_SVG_ICON = require('../assets/send_icon_svg.png');
    GROQ CONSTANTS
 ───────────────────────────────────────────────────────────────── */
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
-const MODEL = 'llama-3.3-70b-versatile';
+const MODEL = 'groq/compound-mini';
 
 const SYSTEM_PROMPT = {
   role: 'system',
